@@ -1,0 +1,1310 @@
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'ac_grass_roots_in_state'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'access_log'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'all_oregon_sum'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'campaign_detail'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'candidate_by_state'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'candidate_sum_by_date'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cc_grass_roots_in_state'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cc_working_transactions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'direction_codes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'documentation'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'hack_oregon_db_status'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'import_dates'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'oregon_by_contributions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'oregon_by_purpose_codes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'oregon_committee_agg'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'raw_candidate_filings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'raw_committee_transactions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'raw_committee_transactions_ammended_transactions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'raw_committee_transactions_errors'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'raw_committees'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'raw_committees_scraped'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'search_log'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'state_sum_by_date'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'state_translation'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sub_type_from_contributor_payee'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'working_candidate_committees'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'working_candidate_filings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'working_committees'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'working_transactions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "fuzzystrmatch"[0m
+  [1m[35m (4.0ms)[0m  [1m[35mDROP TABLE "ac_grass_roots_in_state" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ac_grass_roots_in_state" ("filer_id" float, "filer" text, "candidate_name" text, "total_money" float, "percent_grassroots" float, "percent_instate" float, "total_money_out" float) [0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "access_log" CASCADE[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "access_log" ("committee_id" integer, "date" timestamp) [0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "all_oregon_sum" CASCADE[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "all_oregon_sum" ("in" float, "out" float, "from_within" float, "to_within" float, "from_outside" float, "to_outside" float, "total_grass_roots" float, "total_from_in_state" float) [0m
+  [1m[35m (2.6ms)[0m  [1m[35mDROP TABLE "campaign_detail" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "campaign_detail" ("candidate_name" text, "committee_name" character varying, "race" text, "website" text, "phone" character varying, "total" float, "total_spent" float, "grassroots" float, "instate" float, "filer_id" integer, "election" text, "party" text, "num_transactions" bigint, "committee_type" character varying, "committee_subtype" character varying, "db_update_status" text) [0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "candidate_by_state" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "candidate_by_state" ("candidate_name" text, "filer_id" integer, "state" character varying, "direction" character varying(7), "value" float) [0m
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE "candidate_sum_by_date" CASCADE[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "candidate_sum_by_date" ("filer_id" integer, "tran_date" date, "total_in" float, "total_out" float) [0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE "cc_grass_roots_in_state" CASCADE[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "cc_grass_roots_in_state" ("filer_id" integer, "filer" character varying, "num_transactions" bigint, "in_state" float, "grass_roots" float, "total_contributions" float, "total_money" float, "total_money_out" float, "percent_grass_roots" float, "percent_in_state" float) [0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE "cc_working_transactions" CASCADE[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "cc_working_transactions" ("tran_id" integer, "tran_date" date, "filer" character varying, "contributor_payee" character varying, "sub_type" character varying, "amount" float, "contributor_payee_committee_id" integer, "filer_id" integer, "purp_desc" character varying, "book_type" character varying, "addr_line1" character varying, "filed_date" date, "addr_line2" character varying, "city" character varying, "state" character varying, "zip" integer, "purpose_codes" character varying, "direction" character varying(7), "contributor_payee_class" character varying) [0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "direction_codes" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "direction_codes" ("sub_type" character varying, "direction" character varying(7)) [0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "documentation" CASCADE[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "documentation" ("title" text, "endpoint_name" text, "txt" text) [0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "hack_oregon_db_status" CASCADE[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "hack_oregon_db_status" ("ac_grass_roots_in_state" float, "campaign_detail" float, "candidate_by_state" float, "candidate_sum_by_date" float, "cc_grass_roots_in_state" float, "cc_working_transactions" float, "direction_codes" float, "raw_candidate_filings" float, "raw_committees" float, "raw_committees_scraped" float, "raw_committee_transactions" float, "raw_committee_transactions_ammended_transactions" float, "state_translation" float, "working_candidate_committees" float, "working_candidate_filings" float, "working_committees" float, "working_transactions" float, "date" date, "event_at_log_time" text, "hack_oregon_db_status" float, "all_oregon_sum" float, "state_sum_by_date" float, "documentation" float, "oregon_by_contributions" float, "oregon_by_purpose_codes" float, "sub_type_from_contributor_payee" float, "oregon_committee_agg" float, "import_dates" float, "raw_committee_transactions_errors" float, "access_log" float, "search_log" float) [0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "import_dates" CASCADE[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "import_dates" ("id" decimal, "scrape_date" date, "file_name" text) [0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "oregon_by_contributions" CASCADE[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "oregon_by_contributions" ("contribution_type" character varying, "total" float) [0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "oregon_by_purpose_codes" CASCADE[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "oregon_by_purpose_codes" ("purpose_code" text, "total" float) [0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "oregon_committee_agg" CASCADE[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "oregon_committee_agg" ("contributor_payee" character varying, "contributor_payee_committee_id" integer, "sum" float) [0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE "raw_candidate_filings" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "raw_candidate_filings" ("election_txt" text, "election_year" integer, "office_group" text, "id_nbr" integer, "office" text, "candidate_office" text, "candidate_file_rsn" integer, "file_mthd_ind" text, "filetype_descr" text, "party_descr" text, "major_party_ind" text, "cand_ballot_name_txt" text, "occptn_txt" text, "education_bckgrnd_txt" text, "occptn_bkgrnd_txt" text, "school_grade_diploma_degree_certificate_course_of_study" text, "prev_govt_bkgrnd_txt" text, "judge_incbnt_ind" text, "qlf_ind" text, "filed_date" date, "file_fee_rfnd_date" date, "witdrw_date" date, "withdrw_resn_txt" boolean, "pttn_file_date" date, "pttn_sgnr_rqd_nbr" integer, "pttn_signr_filed_nbr" integer, "pttn_cmplt_date" date, "ballot_order_nbr" integer, "prfx_name_cd" text, "first_name" text, "mdle_name" text, "last_name" text, "sufx_name" text, "title_txt" text, "mailing_addr_line_1" text, "mailing_addr_line_2" text, "mailing_city_name" text, "mailing_st_cd" text, "mailing_zip_code" integer, "mailing_zip_plus_four" integer, "residence_addr_line_1" text, "residence_addr_line_2" text, "residence_city_name" text, "residence_st_cd" text, "residence_zip_code" integer, "residence_zip_plus_four" integer, "home_phone" text, "cell_phone" text, "fax_phone" text, "email" text, "work_phone" text, "web_address" text) [0m
+  [1m[35m (3.8ms)[0m  [1m[35mDROP TABLE "raw_committee_transactions" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "raw_committee_transactions" ("tran_id" integer, "original_id" integer, "tran_date" date, "tran_status" character varying, "filer" character varying, "contributor_payee" character varying, "sub_type" character varying, "amount" float, "aggregate_amount" float, "contributor_payee_committee_id" integer, "filer_id" integer, "attest_by_name" character varying, "attest_date" date, "review_by_name" character varying, "review_date" date, "due_date" date, "occptn_ltr_date" character varying, "pymt_sched_txt" character varying, "purp_desc" character varying, "intrst_rate" character varying, "check_nbr" character varying, "tran_stsfd_ind" boolean, "filed_by_name" character varying, "filed_date" date, "addr_book_agent_name" character varying, "book_type" character varying, "title_txt" character varying, "occptn_txt" character varying, "emp_name" character varying, "emp_city" character varying, "emp_state" character varying, "employ_ind" boolean, "self_employ_ind" boolean, "addr_line1" character varying, "addr_line2" character varying, "city" character varying, "state" character varying, "zip" integer, "zip_plus_four" integer, "county" character varying, "purpose_codes" character varying, "exp_date" character varying) [0m
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "raw_committee_transactions_ammended_transactions" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "raw_committee_transactions_ammended_transactions" ("tran_id" integer, "original_id" integer, "tran_date" date, "tran_status" character varying, "filer" character varying, "contributor_payee" character varying, "sub_type" character varying, "amount" float, "aggregate_amount" float, "contributor_payee_committee_id" integer, "filer_id" integer, "attest_by_name" character varying, "attest_date" date, "review_by_name" character varying, "review_date" date, "due_date" date, "occptn_ltr_date" character varying, "pymt_sched_txt" character varying, "purp_desc" character varying, "intrst_rate" character varying, "check_nbr" character varying, "tran_stsfd_ind" boolean, "filed_by_name" character varying, "filed_date" date, "addr_book_agent_name" character varying, "book_type" character varying, "title_txt" character varying, "occptn_txt" character varying, "emp_name" character varying, "emp_city" character varying, "emp_state" character varying, "employ_ind" boolean, "self_employ_ind" boolean, "addr_line1" character varying, "addr_line2" character varying, "city" character varying, "state" character varying, "zip" integer, "zip_plus_four" integer, "county" character varying, "purpose_codes" character varying, "exp_date" character varying) [0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "raw_committee_transactions_errors" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "raw_committee_transactions_errors" ("tran_id" integer, "original_id" integer, "tran_date" date, "tran_status" character varying, "filer" character varying, "contributor_payee" character varying, "sub_type" character varying, "amount" float, "aggregate_amount" float, "contributor_payee_committee_id" integer, "filer_id" integer, "attest_by_name" character varying, "attest_date" date, "review_by_name" character varying, "review_date" date, "due_date" date, "occptn_ltr_date" character varying, "pymt_sched_txt" character varying, "purp_desc" character varying, "intrst_rate" character varying, "check_nbr" character varying, "tran_stsfd_ind" boolean, "filed_by_name" character varying, "filed_date" date, "addr_book_agent_name" character varying, "book_type" character varying, "title_txt" character varying, "occptn_txt" character varying, "emp_name" character varying, "emp_city" character varying, "emp_state" character varying, "employ_ind" boolean, "self_employ_ind" boolean, "addr_line1" character varying, "addr_line2" character varying, "city" character varying, "state" character varying, "zip" integer, "zip_plus_four" integer, "county" character varying, "purpose_codes" character varying, "exp_date" character varying) [0m
+  [1m[35m (2.6ms)[0m  [1m[35mDROP TABLE "raw_committees" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "raw_committees" ("committee_id" integer, "committee_name" character varying, "committee_type" character varying, "committee_subtype" character varying, "candidate_office" character varying, "candidate_office_group" character varying, "filing_date" date, "organization_filing Date" date, "treasurer_first_name" character varying, "treasurer_last_name" character varying, "treasurer_mailing_address" character varying, "treasurer_work_phone" character varying, "treasurer_fax" character varying, "candidate_first_name" character varying, "candidate_last_name" character varying, "candidate_maling_address" character varying, "candidate_work_phone" character varying, "candidate_residence_phone" character varying, "candidate_fax" character varying, "candidate_email" character varying, "active_election" character varying, "measure" character varying) [0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "raw_committees_scraped" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "raw_committees_scraped" ("name" text, "id" integer, "acronym" text, "pac_type" text, "filing_effective_from" text, "filing_type" text, "address" text, "campaign_phone" text, "treasurer_name" text, "treasurer_mailing_address" text, "treasurer_work_phone_home_phone_fax" text, "treasurer_email_address" text, "candidate_name" text, "candidate_election_office" text, "candidate_party_affiliation" text, "candidate_candidate_address" text, "candidate_work_phone_home_phone_fax" text, "candidate_mailing_address" text, "candidate_email_address" text, "candidate_occupation" text, "candidate_employer" text, "measure_election" text, "measure_support" text, "measure_details" text, "committee_type" text) [0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "search_log" CASCADE[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "search_log" ("search_term" text, "date" timestamp) [0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "state_sum_by_date" CASCADE[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "state_sum_by_date" ("tran_date" date, "total_in" float, "total_out" float, "total_from_within" float, "total_to_within" float, "total_from_the_outside" float, "total_to_the_outside" float, "total_grass_roots" float, "total_from_in_state" float) [0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "state_translation" CASCADE[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "state_translation" ("statefull" character varying, "abbreviation" character varying(3)) [0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "sub_type_from_contributor_payee" CASCADE[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "sub_type_from_contributor_payee" ("contributor_payee" character varying) [0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "working_candidate_committees" CASCADE[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "working_candidate_committees" ("candidate_name" text, "committee_id" integer, "committee_name" character varying, "election_office" text, "phone" text, "party_affiliation" text, "web_address" text) [0m
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE "working_candidate_filings" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "working_candidate_filings" ("election_txt" text, "election_year" integer, "office_group" text, "id_nbr" integer, "office" text, "candidate_office" text, "candidate_file_rsn" integer, "file_mthd_ind" text, "filetype_descr" text, "party_descr" text, "major_party_ind" text, "cand_ballot_name_txt" text, "occptn_txt" text, "education_bckgrnd_txt" text, "occptn_bkgrnd_txt" text, "school_grade_diploma_degree_certificate_course_of_study" text, "prev_govt_bkgrnd_txt" text, "judge_incbnt_ind" text, "qlf_ind" text, "filed_date" date, "file_fee_rfnd_date" date, "witdrw_date" date, "withdrw_resn_txt" boolean, "pttn_file_date" date, "pttn_sgnr_rqd_nbr" integer, "pttn_signr_filed_nbr" integer, "pttn_cmplt_date" date, "ballot_order_nbr" integer, "prfx_name_cd" text, "first_name" text, "mdle_name" text, "last_name" text, "sufx_name" text, "title_txt" text, "mailing_addr_line_1" text, "mailing_addr_line_2" text, "mailing_city_name" text, "mailing_st_cd" text, "mailing_zip_code" integer, "mailing_zip_plus_four" integer, "residence_addr_line_1" text, "residence_addr_line_2" text, "residence_city_name" text, "residence_st_cd" text, "residence_zip_code" integer, "residence_zip_plus_four" integer, "home_phone" text, "cell_phone" text, "fax_phone" text, "email" text, "work_phone" text, "web_address" text) [0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE "working_committees" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "working_committees" ("committee_id" integer, "committee_name" character varying, "committee_type" character varying, "committee_subtype" character varying, "party_affiliation" text, "phone" character varying, "election_office" text, "candidate_name" text, "candidate_email_address" character varying, "candidate_work_phone_home_phone_fax" text, "candidate_address" character varying, "treasurer_name" text, "treasurer_work_phone_home_phone_fax" text, "treasurer_mailing_address" character varying, "web_address" text, "measure" character varying, "simple_election" text, "db_update_status" text) [0m
+  [1m[35m (4.5ms)[0m  [1m[35mDROP TABLE "working_transactions" CASCADE[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "working_transactions" ("tran_id" integer, "tran_date" date, "filer" character varying, "contributor_payee" character varying, "sub_type" character varying, "amount" float, "contributor_payee_committee_id" integer, "filer_id" integer, "purp_desc" character varying, "book_type" character varying, "addr_line1" character varying, "filed_date" date, "addr_line2" character varying, "city" character varying, "state" character varying, "zip" integer, "purpose_codes" character varying, "direction" character varying(7), "contributor_payee_class" character varying) [0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "raw_committee_transactions"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "working_candidate_committees"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "raw_committee_transactions_ammended_transactions"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "fuzzystrmatch"[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE "ac_grass_roots_in_state" CASCADE[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ac_grass_roots_in_state" ("filer_id" float, "filer" text, "candidate_name" text, "total_money" float, "percent_grassroots" float, "percent_instate" float, "total_money_out" float) [0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "access_log" CASCADE[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "access_log" ("committee_id" integer, "date" timestamp) [0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "all_oregon_sum" CASCADE[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "all_oregon_sum" ("in" float, "out" float, "from_within" float, "to_within" float, "from_outside" float, "to_outside" float, "total_grass_roots" float, "total_from_in_state" float) [0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "campaign_detail" CASCADE[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "campaign_detail" ("candidate_name" text, "committee_name" character varying, "race" text, "website" text, "phone" character varying, "total" float, "total_spent" float, "grassroots" float, "instate" float, "filer_id" integer, "election" text, "party" text, "num_transactions" bigint, "committee_type" character varying, "committee_subtype" character varying, "db_update_status" text) [0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE "candidate_by_state" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "candidate_by_state" ("candidate_name" text, "filer_id" integer, "state" character varying, "direction" character varying(7), "value" float) [0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "candidate_sum_by_date" CASCADE[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "candidate_sum_by_date" ("filer_id" integer, "tran_date" date, "total_in" float, "total_out" float) [0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "cc_grass_roots_in_state" CASCADE[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "cc_grass_roots_in_state" ("filer_id" integer, "filer" character varying, "num_transactions" bigint, "in_state" float, "grass_roots" float, "total_contributions" float, "total_money" float, "total_money_out" float, "percent_grass_roots" float, "percent_in_state" float) [0m
+  [1m[35m (6.0ms)[0m  [1m[35mDROP TABLE "cc_working_transactions" CASCADE[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "cc_working_transactions" ("tran_id" integer, "tran_date" date, "filer" character varying, "contributor_payee" character varying, "sub_type" character varying, "amount" float, "contributor_payee_committee_id" integer, "filer_id" integer, "purp_desc" character varying, "book_type" character varying, "addr_line1" character varying, "filed_date" date, "addr_line2" character varying, "city" character varying, "state" character varying, "zip" integer, "purpose_codes" character varying, "direction" character varying(7), "contributor_payee_class" character varying) [0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "direction_codes" CASCADE[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "direction_codes" ("sub_type" character varying, "direction" character varying(7)) [0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "documentation" CASCADE[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "documentation" ("title" text, "endpoint_name" text, "txt" text) [0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "hack_oregon_db_status" CASCADE[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "hack_oregon_db_status" ("ac_grass_roots_in_state" float, "campaign_detail" float, "candidate_by_state" float, "candidate_sum_by_date" float, "cc_grass_roots_in_state" float, "cc_working_transactions" float, "direction_codes" float, "raw_candidate_filings" float, "raw_committees" float, "raw_committees_scraped" float, "raw_committee_transactions" float, "raw_committee_transactions_ammended_transactions" float, "state_translation" float, "working_candidate_committees" float, "working_candidate_filings" float, "working_committees" float, "working_transactions" float, "date" date, "event_at_log_time" text, "hack_oregon_db_status" float, "all_oregon_sum" float, "state_sum_by_date" float, "documentation" float, "oregon_by_contributions" float, "oregon_by_purpose_codes" float, "sub_type_from_contributor_payee" float, "oregon_committee_agg" float, "import_dates" float, "raw_committee_transactions_errors" float, "access_log" float, "search_log" float) [0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "import_dates" CASCADE[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "import_dates" ("id" decimal, "scrape_date" date, "file_name" text) [0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "oregon_by_contributions" CASCADE[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "oregon_by_contributions" ("contribution_type" character varying, "total" float) [0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "oregon_by_purpose_codes" CASCADE[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "oregon_by_purpose_codes" ("purpose_code" text, "total" float) [0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "oregon_committee_agg" CASCADE[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "oregon_committee_agg" ("contributor_payee" character varying, "contributor_payee_committee_id" integer, "sum" float) [0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE "raw_candidate_filings" CASCADE[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "raw_candidate_filings" ("election_txt" text, "election_year" integer, "office_group" text, "id_nbr" integer, "office" text, "candidate_office" text, "candidate_file_rsn" integer, "file_mthd_ind" text, "filetype_descr" text, "party_descr" text, "major_party_ind" text, "cand_ballot_name_txt" text, "occptn_txt" text, "education_bckgrnd_txt" text, "occptn_bkgrnd_txt" text, "school_grade_diploma_degree_certificate_course_of_study" text, "prev_govt_bkgrnd_txt" text, "judge_incbnt_ind" text, "qlf_ind" text, "filed_date" date, "file_fee_rfnd_date" date, "witdrw_date" date, "withdrw_resn_txt" boolean, "pttn_file_date" date, "pttn_sgnr_rqd_nbr" integer, "pttn_signr_filed_nbr" integer, "pttn_cmplt_date" date, "ballot_order_nbr" integer, "prfx_name_cd" text, "first_name" text, "mdle_name" text, "last_name" text, "sufx_name" text, "title_txt" text, "mailing_addr_line_1" text, "mailing_addr_line_2" text, "mailing_city_name" text, "mailing_st_cd" text, "mailing_zip_code" integer, "mailing_zip_plus_four" integer, "residence_addr_line_1" text, "residence_addr_line_2" text, "residence_city_name" text, "residence_st_cd" text, "residence_zip_code" integer, "residence_zip_plus_four" integer, "home_phone" text, "cell_phone" text, "fax_phone" text, "email" text, "work_phone" text, "web_address" text) [0m
+  [1m[35m (13.4ms)[0m  [1m[35mDROP TABLE "raw_committee_transactions" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "raw_committee_transactions" ("tran_id" integer, "original_id" integer, "tran_date" date, "tran_status" character varying, "filer" character varying, "contributor_payee" character varying, "sub_type" character varying, "amount" float, "aggregate_amount" float, "contributor_payee_committee_id" integer, "filer_id" integer, "attest_by_name" character varying, "attest_date" date, "review_by_name" character varying, "review_date" date, "due_date" date, "occptn_ltr_date" character varying, "pymt_sched_txt" character varying, "purp_desc" character varying, "intrst_rate" character varying, "check_nbr" character varying, "tran_stsfd_ind" boolean, "filed_by_name" character varying, "filed_date" date, "addr_book_agent_name" character varying, "book_type" character varying, "title_txt" character varying, "occptn_txt" character varying, "emp_name" character varying, "emp_city" character varying, "emp_state" character varying, "employ_ind" boolean, "self_employ_ind" boolean, "addr_line1" character varying, "addr_line2" character varying, "city" character varying, "state" character varying, "zip" integer, "zip_plus_four" integer, "county" character varying, "purpose_codes" character varying, "exp_date" character varying) [0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "raw_committee_transactions_ammended_transactions" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "raw_committee_transactions_ammended_transactions" ("tran_id" integer, "original_id" integer, "tran_date" date, "tran_status" character varying, "filer" character varying, "contributor_payee" character varying, "sub_type" character varying, "amount" float, "aggregate_amount" float, "contributor_payee_committee_id" integer, "filer_id" integer, "attest_by_name" character varying, "attest_date" date, "review_by_name" character varying, "review_date" date, "due_date" date, "occptn_ltr_date" character varying, "pymt_sched_txt" character varying, "purp_desc" character varying, "intrst_rate" character varying, "check_nbr" character varying, "tran_stsfd_ind" boolean, "filed_by_name" character varying, "filed_date" date, "addr_book_agent_name" character varying, "book_type" character varying, "title_txt" character varying, "occptn_txt" character varying, "emp_name" character varying, "emp_city" character varying, "emp_state" character varying, "employ_ind" boolean, "self_employ_ind" boolean, "addr_line1" character varying, "addr_line2" character varying, "city" character varying, "state" character varying, "zip" integer, "zip_plus_four" integer, "county" character varying, "purpose_codes" character varying, "exp_date" character varying) [0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "raw_committee_transactions_errors" CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "raw_committee_transactions_errors" ("tran_id" integer, "original_id" integer, "tran_date" date, "tran_status" character varying, "filer" character varying, "contributor_payee" character varying, "sub_type" character varying, "amount" float, "aggregate_amount" float, "contributor_payee_committee_id" integer, "filer_id" integer, "attest_by_name" character varying, "attest_date" date, "review_by_name" character varying, "review_date" date, "due_date" date, "occptn_ltr_date" character varying, "pymt_sched_txt" character varying, "purp_desc" character varying, "intrst_rate" character varying, "check_nbr" character varying, "tran_stsfd_ind" boolean, "filed_by_name" character varying, "filed_date" date, "addr_book_agent_name" character varying, "book_type" character varying, "title_txt" character varying, "occptn_txt" character varying, "emp_name" character varying, "emp_city" character varying, "emp_state" character varying, "employ_ind" boolean, "self_employ_ind" boolean, "addr_line1" character varying, "addr_line2" character varying, "city" character varying, "state" character varying, "zip" integer, "zip_plus_four" integer, "county" character varying, "purpose_codes" character varying, "exp_date" character varying) [0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "raw_committees" CASCADE[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "raw_committees" ("committee_id" integer, "committee_name" character varying, "committee_type" character varying, "committee_subtype" character varying, "candidate_office" character varying, "candidate_office_group" character varying, "filing_date" date, "organization_filing Date" date, "treasurer_first_name" character varying, "treasurer_last_name" character varying, "treasurer_mailing_address" character varying, "treasurer_work_phone" character varying, "treasurer_fax" character varying, "candidate_first_name" character varying, "candidate_last_name" character varying, "candidate_maling_address" character varying, "candidate_work_phone" character varying, "candidate_residence_phone" character varying, "candidate_fax" character varying, "candidate_email" character varying, "active_election" character varying, "measure" character varying) [0m
+  [1m[35m (2.6ms)[0m  [1m[35mDROP TABLE "raw_committees_scraped" CASCADE[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "raw_committees_scraped" ("name" text, "id" integer, "acronym" text, "pac_type" text, "filing_effective_from" text, "filing_type" text, "address" text, "campaign_phone" text, "treasurer_name" text, "treasurer_mailing_address" text, "treasurer_work_phone_home_phone_fax" text, "treasurer_email_address" text, "candidate_name" text, "candidate_election_office" text, "candidate_party_affiliation" text, "candidate_candidate_address" text, "candidate_work_phone_home_phone_fax" text, "candidate_mailing_address" text, "candidate_email_address" text, "candidate_occupation" text, "candidate_employer" text, "measure_election" text, "measure_support" text, "measure_details" text, "committee_type" text) [0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "search_log" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "search_log" ("search_term" text, "date" timestamp) [0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "state_sum_by_date" CASCADE[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "state_sum_by_date" ("tran_date" date, "total_in" float, "total_out" float, "total_from_within" float, "total_to_within" float, "total_from_the_outside" float, "total_to_the_outside" float, "total_grass_roots" float, "total_from_in_state" float) [0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "state_translation" CASCADE[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "state_translation" ("statefull" character varying, "abbreviation" character varying(3)) [0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "sub_type_from_contributor_payee" CASCADE[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "sub_type_from_contributor_payee" ("contributor_payee" character varying) [0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "working_candidate_committees" CASCADE[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "working_candidate_committees" ("candidate_name" text, "committee_id" integer, "committee_name" character varying, "election_office" text, "phone" text, "party_affiliation" text, "web_address" text) [0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "working_candidate_filings" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "working_candidate_filings" ("election_txt" text, "election_year" integer, "office_group" text, "id_nbr" integer, "office" text, "candidate_office" text, "candidate_file_rsn" integer, "file_mthd_ind" text, "filetype_descr" text, "party_descr" text, "major_party_ind" text, "cand_ballot_name_txt" text, "occptn_txt" text, "education_bckgrnd_txt" text, "occptn_bkgrnd_txt" text, "school_grade_diploma_degree_certificate_course_of_study" text, "prev_govt_bkgrnd_txt" text, "judge_incbnt_ind" text, "qlf_ind" text, "filed_date" date, "file_fee_rfnd_date" date, "witdrw_date" date, "withdrw_resn_txt" boolean, "pttn_file_date" date, "pttn_sgnr_rqd_nbr" integer, "pttn_signr_filed_nbr" integer, "pttn_cmplt_date" date, "ballot_order_nbr" integer, "prfx_name_cd" text, "first_name" text, "mdle_name" text, "last_name" text, "sufx_name" text, "title_txt" text, "mailing_addr_line_1" text, "mailing_addr_line_2" text, "mailing_city_name" text, "mailing_st_cd" text, "mailing_zip_code" integer, "mailing_zip_plus_four" integer, "residence_addr_line_1" text, "residence_addr_line_2" text, "residence_city_name" text, "residence_st_cd" text, "residence_zip_code" integer, "residence_zip_plus_four" integer, "home_phone" text, "cell_phone" text, "fax_phone" text, "email" text, "work_phone" text, "web_address" text) [0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "working_committees" CASCADE[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "working_committees" ("committee_id" integer, "committee_name" character varying, "committee_type" character varying, "committee_subtype" character varying, "party_affiliation" text, "phone" character varying, "election_office" text, "candidate_name" text, "candidate_email_address" character varying, "candidate_work_phone_home_phone_fax" text, "candidate_address" character varying, "treasurer_name" text, "treasurer_work_phone_home_phone_fax" text, "treasurer_mailing_address" character varying, "web_address" text, "measure" character varying, "simple_election" text, "db_update_status" text) [0m
+  [1m[35m (8.5ms)[0m  [1m[35mDROP TABLE "working_transactions" CASCADE[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "working_transactions" ("tran_id" integer, "tran_date" date, "filer" character varying, "contributor_payee" character varying, "sub_type" character varying, "amount" float, "contributor_payee_committee_id" integer, "filer_id" integer, "purp_desc" character varying, "book_type" character varying, "addr_line1" character varying, "filed_date" date, "addr_line2" character varying, "city" character varying, "state" character varying, "zip" integer, "purpose_codes" character varying, "direction" character varying(7), "contributor_payee_class" character varying) [0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('0')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "raw_committee_transactions"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "working_candidate_committees"[0m
+  [1m[35m (158.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "raw_committee_transactions"[0m
+  [1m[35m (155.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "raw_committee_transactions"[0m
+  [1m[36mRawCommitteeTransaction Load (0.3ms)[0m  [1m[34mSELECT  "raw_committee_transactions".* FROM "raw_committee_transactions" ORDER BY "raw_committee_transactions"."" DESC LIMIT 1[0m
+  [1m[36mRawCommitteeTransaction Load (0.3ms)[0m  [1m[34mSELECT  "raw_committee_transactions".* FROM "raw_committee_transactions" ORDER BY "raw_committee_transactions"."" DESC LIMIT 1[0m
+  [1m[35m (20.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAccessLogs (20151017195823)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (26.1ms)[0m  [1m[35mCREATE TABLE "access_logs" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151017195823"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAllOregonSums (20151017195824)
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "all_oregon_sums" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151017195824"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCampaignDetails (20151017195825)
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "campaign_details" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151017195825"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCandidateByStates (20151017195826)
+  [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "candidate_by_states" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151017195826"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCandidateSumByDates (20151017195827)
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "candidate_sum_by_dates" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151017195827"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCcGrassRootsInStates (20151017195828)
+  [1m[35m (5.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "cc_grass_roots_in_states" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20151017195828"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCcWorkingTransactions (20151017195829)
+  [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "cc_working_transactions" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPrimaryKeyToRawCommitteeTransactions (20151017210406)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.6ms)[0m  [1m[35mALTER TABLE "raw_committee_transactions" ADD "tran_id" serial primary key[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPrimaryKeyToRawCommitteeTransactions (20151017210406)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPrimaryKeyToRawCommitteeTransactions (20151017210406)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "raw_committee_transactions" ALTER COLUMN "tran_id" TYPE serial primary key[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mRawCommitteeTransaction Load (1.6ms)[0m  [1m[34mSELECT  "raw_committee_transactions".* FROM "raw_committee_transactions" ORDER BY "raw_committee_transactions"."tran_id" DESC LIMIT 1[0m
+  [1m[36mRawCommitteeTransaction Load (0.4ms)[0m  [1m[34mSELECT  "raw_committee_transactions".* FROM "raw_committee_transactions" ORDER BY "raw_committee_transactions"."tran_id" DESC LIMIT 1[0m
+
+
+Started GET "/raw_committee_transactions" for ::1 at 2015-10-17 14:13:26 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development.
+
+):
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activerecord/lib/active_record/migration.rb:469:in `check_pending!'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activerecord/lib/active_record/migration.rb:449:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/callbacks.rb:743:in `_run_call_callbacks'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:48:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:42:in `call_app'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:24:in `block in call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:70:in `block in tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:70:in `tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:24:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/runtime.rb:22:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/load_interlock.rb:13:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/static.rb:133:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/sendfile.rb:111:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/engine.rb:522:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/handler/webrick.rb:86:in `service'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPrimaryKeyToRawCommitteeTransactions (20151017210406)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "raw_committee_transactions" ALTER COLUMN "tran_id" TYPE serial primary key[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'ac_grass_roots_in_state'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'access_log'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'access_logs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'all_oregon_sum'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'all_oregon_sums'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'campaign_detail'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'campaign_details'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'candidate_by_state'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'candidate_by_states'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'candidate_sum_by_date'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'candidate_sum_by_dates'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cc_grass_roots_in_state'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cc_grass_roots_in_states'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cc_working_transactions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'direction_codes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'documentation'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'hack_oregon_db_status'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'import_dates'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'oregon_by_contributions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'oregon_by_purpose_codes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'oregon_committee_agg'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'raw_candidate_filings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'raw_committee_transactions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'raw_committee_transactions_ammended_transactions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'raw_committee_transactions_errors'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'raw_committees'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'raw_committees_scraped'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'search_log'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'state_sum_by_date'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'state_translation'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sub_type_from_contributor_payee'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'working_candidate_committees'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'working_candidate_filings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'working_committees'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'working_transactions'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/raw_committee_transactions" for ::1 at 2015-10-17 14:14:17 -0700
+Processing by RawCommitteeTransactionsController#index as */*
+  [1m[36mRawCommitteeTransaction Load (0.4ms)[0m  [1m[34mSELECT "raw_committee_transactions".* FROM "raw_committee_transactions" WHERE (amount > )[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::StatementInvalid (PG::SyntaxError: ERROR:  syntax error at or near ")"
+LINE 1: ...tions".* FROM "raw_committee_transactions" WHERE (amount > )
+                                                                      ^
+: SELECT "raw_committee_transactions".* FROM "raw_committee_transactions" WHERE (amount > )):
+  app/controllers/raw_committee_transactions_controller.rb:4:in `index'
+
+
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.7ms)
+
+
+Started GET "/raw_committee_transactions?greater_than=200" for ::1 at 2015-10-17 14:14:53 -0700
+Processing by RawCommitteeTransactionsController#index as */*
+  Parameters: {"greater_than"=>"200"}
+  [1m[36mRawCommitteeTransaction Load (1769.5ms)[0m  [1m[34mSELECT "raw_committee_transactions".* FROM "raw_committee_transactions" WHERE (amount > 200)[0m
+Completed   in 28463ms (ActiveRecord: 1773.8ms)
+
+
+Started GET "/raw_committee_transactions?greater_than=2000" for ::1 at 2015-10-17 14:15:28 -0700
+Processing by RawCommitteeTransactionsController#index as */*
+  Parameters: {"greater_than"=>"2000"}
+  [1m[36mRawCommitteeTransaction Load (516.1ms)[0m  [1m[34mSELECT "raw_committee_transactions".* FROM "raw_committee_transactions" WHERE (amount > 2000)[0m
+Completed   in 8490ms (ActiveRecord: 520.0ms)
+
+
+Started GET "/raw_committee_transactions?greater_than=20000" for ::1 at 2015-10-17 14:15:52 -0700
+Processing by RawCommitteeTransactionsController#index as */*
+  Parameters: {"greater_than"=>"20000"}
+  [1m[36mRawCommitteeTransaction Load (248.4ms)[0m  [1m[34mSELECT "raw_committee_transactions".* FROM "raw_committee_transactions" WHERE (amount > 20000)[0m
+Completed 200 OK in 3320ms (Views: 3059.7ms | ActiveRecord: 252.8ms)
+  [1m[36mRawCommitteeTransaction Load (0.8ms)[0m  [1m[34mSELECT  "raw_committee_transactions".* FROM "raw_committee_transactions" ORDER BY "raw_committee_transactions"."tran_id" DESC LIMIT 1[0m
+  [1m[36mRawCommitteeTransaction Load (0.8ms)[0m  [1m[34mSELECT  "raw_committee_transactions".* FROM "raw_committee_transactions" ORDER BY "raw_committee_transactions"."tran_id" DESC LIMIT 1[0m
+
+
+Started GET "/raw_committee_transactions?greater_than=20000" for ::1 at 2015-10-17 14:21:43 -0700
+Processing by RawCommitteeTransactionsController#index as */*
+  Parameters: {"greater_than"=>"20000"}
+  [1m[36mRawCommitteeTransaction Load (247.2ms)[0m  [1m[34mSELECT "raw_committee_transactions".* FROM "raw_committee_transactions" WHERE (amount > 20000)[0m
+Completed 200 OK in 1447ms (Views: 1188.0ms | ActiveRecord: 251.3ms)
+
+
+Started GET "/raw_committee_transactions?greater_than=20000" for ::1 at 2015-10-17 14:22:11 -0700
+Processing by RawCommitteeTransactionsController#index as */*
+  Parameters: {"greater_than"=>"20000"}
+  [1m[36mRawCommitteeTransaction Load (1.3ms)[0m  [1m[34mSELECT  "raw_committee_transactions".* FROM "raw_committee_transactions" WHERE (amount > 20000) ORDER BY "raw_committee_transactions"."tran_id" ASC LIMIT 1[0m
+Completed 200 OK in 33ms (Views: 1.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/raw_committee_transactions?greater_than=200" for ::1 at 2015-10-17 14:22:38 -0700
+Processing by RawCommitteeTransactionsController#index as */*
+  Parameters: {"greater_than"=>"200"}
+  [1m[36mRawCommitteeTransaction Load (1766.5ms)[0m  [1m[34mSELECT "raw_committee_transactions".* FROM "raw_committee_transactions" WHERE (amount > 200)[0m
+Completed   in 55276ms (ActiveRecord: 1768.9ms)
+
+
+Started GET "/raw_committee_transactions?greater_than=200" for ::1 at 2015-10-17 14:23:57 -0700
+Processing by RawCommitteeTransactionsController#index as */*
+  Parameters: {"greater_than"=>"200"}
+  [1m[36mRawCommitteeTransaction Load (1.5ms)[0m  [1m[34mSELECT  "raw_committee_transactions".* FROM "raw_committee_transactions" WHERE (amount > 200) LIMIT 50[0m
+Completed 200 OK in 63ms (Views: 47.5ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/raw_committee_transactions?greater_than=200" for ::1 at 2015-10-17 14:23:59 -0700
+Processing by RawCommitteeTransactionsController#index as */*
+  Parameters: {"greater_than"=>"200"}
+  [1m[36mRawCommitteeTransaction Load (0.7ms)[0m  [1m[34mSELECT  "raw_committee_transactions".* FROM "raw_committee_transactions" WHERE (amount > 200) LIMIT 50[0m
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/raw_committee_transactions?greater_than=200" for ::1 at 2015-10-17 14:24:04 -0700
+Processing by RawCommitteeTransactionsController#index as */*
+  Parameters: {"greater_than"=>"200"}
+  [1m[36mRawCommitteeTransaction Load (3.1ms)[0m  [1m[34mSELECT  "raw_committee_transactions".* FROM "raw_committee_transactions" WHERE (amount > 200) LIMIT 500[0m
+Completed 200 OK in 141ms (Views: 134.0ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/raw_committee_transactions?greater_than=200" for ::1 at 2015-10-17 14:24:06 -0700
+Processing by RawCommitteeTransactionsController#index as */*
+  Parameters: {"greater_than"=>"200"}
+  [1m[36mRawCommitteeTransaction Load (3.0ms)[0m  [1m[34mSELECT  "raw_committee_transactions".* FROM "raw_committee_transactions" WHERE (amount > 200) LIMIT 500[0m
+Completed 200 OK in 94ms (Views: 90.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/raw_committee_transactions?greater_than=200" for ::1 at 2015-10-17 14:24:07 -0700
+Processing by RawCommitteeTransactionsController#index as */*
+  Parameters: {"greater_than"=>"200"}
+  [1m[36mRawCommitteeTransaction Load (3.0ms)[0m  [1m[34mSELECT  "raw_committee_transactions".* FROM "raw_committee_transactions" WHERE (amount > 200) LIMIT 500[0m
+Completed 200 OK in 107ms (Views: 103.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/raw_committee_transactions?greater_than=200" for ::1 at 2015-10-17 14:24:09 -0700
+Processing by RawCommitteeTransactionsController#index as */*
+  Parameters: {"greater_than"=>"200"}
+  [1m[36mRawCommitteeTransaction Load (25.9ms)[0m  [1m[34mSELECT  "raw_committee_transactions".* FROM "raw_committee_transactions" WHERE (amount > 200) LIMIT 5000[0m
+Completed 200 OK in 1098ms (Views: 1068.4ms | ActiveRecord: 28.3ms)
+
+
+Started GET "/raw_committee_transactions" for ::1 at 2015-10-17 14:39:46 -0700
+
+NoMethodError (undefined method `jsonapi_resources' for #<ActionDispatch::Routing::Mapper:0x007ff54fdabc58>):
+  config/routes.rb:2:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.0ms)
+
+
+Started GET "/raw_committee_transactions" for ::1 at 2015-10-17 14:47:40 -0700
+
+ActionController::RoutingError (No route matches [GET] "/raw_committee_transactions"):
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:52:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:42:in `call_app'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:24:in `block in call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:70:in `block in tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:70:in `tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:24:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/runtime.rb:22:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/load_interlock.rb:13:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/static.rb:133:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/sendfile.rb:111:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/engine.rb:522:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/handler/webrick.rb:86:in `service'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.5ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.3ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (75.1ms)
+
+
+Started GET "/raw-committee-transactions" for ::1 at 2015-10-17 14:48:17 -0700
+Processing by RawCommitteeTransactionsController#index as */*
+  [1m[36mRawCommitteeTransaction Load (4825.4ms)[0m  [1m[34mSELECT "raw_committee_transactions".* FROM "raw_committee_transactions" ORDER BY "raw_committee_transactions"."tran_id" ASC[0m
+Completed   in 14511ms (ActiveRecord: 4843.4ms)
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "campaign_details"[0m
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "campaign_detail"[0m
+  [1m[36mCampaignDetail Load (1.3ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" ORDER BY "campaign_detail"."" DESC LIMIT 1[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "campaign_detail"[0m
+  [1m[36mCampaignDetail Load (2.0ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" ORDER BY "campaign_detail"."filer_id" DESC LIMIT 1[0m
+  [1m[36mCampaignDetail Load (0.4ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" ORDER BY "campaign_detail"."filer_id" DESC LIMIT 1[0m
+  [1m[36mCampaignDetail Load (0.4ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" ORDER BY amount DESC LIMIT 1[0m
+  [1m[36mCampaignDetail Load (1.3ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" ORDER BY total DESC LIMIT 1[0m
+  [1m[36mCampaignDetail Load (0.8ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" ORDER BY total ASC LIMIT 1[0m
+  [1m[36mCampaignDetail Load (0.8ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" ORDER BY total DESC LIMIT 1[0m
+  [1m[36mCampaignDetail Load (2.4ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" ORDER BY total ASC LIMIT 1[0m
+  [1m[36mCampaignDetail Load (2.3ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" ORDER BY total DESC LIMIT 1[0m
+  [1m[36mCampaignDetail Load (1.4ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" WHERE ("campaign_detail"."amount" IS NOT NULL) ORDER BY total DESC LIMIT 1[0m
+  [1m[36mCampaignDetail Load (3.0ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" WHERE ("campaign_detail"."total" IS NOT NULL) ORDER BY total DESC LIMIT 1[0m
+  [1m[36mCampaignDetail Load (1.0ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" WHERE ("campaign_detail"."total" IS NOT NULL) ORDER BY total DESC LIMIT 1 OFFSET 1[0m
+  [1m[36mCampaignDetail Load (3.1ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" WHERE ("campaign_detail"."total" IS NOT NULL) ORDER BY total DESC LIMIT 1 OFFSET 1[0m
+  [1m[36mCampaignDetail Load (1.0ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" WHERE ("campaign_detail"."total" IS NOT NULL) ORDER BY total DESC LIMIT 1 OFFSET 1[0m
+
+
+Started GET "/campaign-detail" for ::1 at 2015-10-17 15:05:28 -0700
+
+NameError (JSONAPI: Could not find resource 'campaign_detail'. (Class CampaignDetailResource not found)):
+  config/routes.rb:2:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.9ms)
+
+
+Started GET "/campaign-detail" for ::1 at 2015-10-17 15:06:06 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (7.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development.
+
+):
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activerecord/lib/active_record/migration.rb:469:in `check_pending!'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activerecord/lib/active_record/migration.rb:449:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/callbacks.rb:743:in `_run_call_callbacks'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:48:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:42:in `call_app'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:24:in `block in call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:70:in `block in tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:70:in `tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:24:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/runtime.rb:22:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/load_interlock.rb:13:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/static.rb:133:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/sendfile.rb:111:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/engine.rb:522:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/handler/webrick.rb:86:in `service'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.2ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.1ms)
+
+
+Started GET "/campaign-detail" for ::1 at 2015-10-17 15:06:43 -0700
+
+ActionController::RoutingError (uninitialized constant CampaignDetailController):
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/inflector/methods.rb:259:in `const_get'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/inflector/methods.rb:259:in `block in constantize'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/inflector/methods.rb:257:in `each'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/inflector/methods.rb:257:in `inject'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/inflector/methods.rb:257:in `constantize'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/http/request.rb:86:in `controller_class'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/routing/route_set.rb:45:in `controller'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/routing/route_set.rb:31:in `serve'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/journey/router.rb:42:in `block in serve'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/journey/router.rb:29:in `each'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/journey/router.rb:29:in `serve'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/routing/route_set.rb:718:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionview/lib/action_view/digestor.rb:14:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/etag.rb:25:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/conditional_get.rb:25:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/head.rb:12:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activerecord/lib/active_record/query_cache.rb:36:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activerecord/lib/active_record/connection_adapters/abstract/connection_pool.rb:963:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activerecord/lib/active_record/migration.rb:453:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/callbacks.rb:743:in `_run_call_callbacks'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/callbacks.rb:90:in `run_callbacks'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:48:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:42:in `call_app'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:24:in `block in call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:70:in `block in tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:70:in `tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:24:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/runtime.rb:22:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/load_interlock.rb:13:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/static.rb:133:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/sendfile.rb:111:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/engine.rb:522:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/handler/webrick.rb:86:in `service'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.4ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (69.8ms)
+
+
+Started GET "/campaign-detail" for ::1 at 2015-10-17 15:07:13 -0700
+Processing by CampaignDetailController#index as */*
+  [1m[36mCampaignDetail Load (9.3ms)[0m  [1m[34mSELECT "campaign_detail".* FROM "campaign_detail" ORDER BY "campaign_detail"."filer_id" ASC[0m
+Completed 200 OK in 289ms (Views: 95.3ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/campaign-detail" for ::1 at 2015-10-17 15:07:20 -0700
+Processing by CampaignDetailController#index as */*
+  [1m[36mCampaignDetail Load (26.7ms)[0m  [1m[34mSELECT "campaign_detail".* FROM "campaign_detail" ORDER BY "campaign_detail"."filer_id" ASC[0m
+Completed 200 OK in 754ms (Views: 169.3ms | ActiveRecord: 26.7ms)

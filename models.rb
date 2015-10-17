@@ -1,0 +1,4 @@
+arr = %w("AcGrassRootsInState AccessLog AllOregonSum CampaignDetail CandidateByState CandidateSumByDate CcGrassRootsInState CcWorkingTransactions DirectionCodes Documentation HackOregonDbStatus ImportDates OregonByContributions OregonByPurposeCodes OregonCommitteeAgg RawCandidateFilings RawCommitteeTransactions RawCommitteeTransactionsAmmendedTransactions RawCommitteeTransactionsErrors RawCommittees RawCommitteesScraped SearchLog StateSumByDate StateTranslation SubTypeFromContributorPayee WorkingCandidateCommittees WorkingCandidateFilings WorkingCommittees WorkingTransactions")
+arr.each do |model_name|
+  system("rails g model #{model_name}")
+end
