@@ -9,6 +9,9 @@ gem 'rack', github: "rack/rack"
 
 # Use sqlite3 as the database for Active Record
 gem 'pg'
+gem 'figaro'
+gem 'puma'
+
 gem 'jsonapi-resources', github: 'dandlezzz/jsonapi-resources'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -18,7 +21,13 @@ gem 'jsonapi-resources', github: 'dandlezzz/jsonapi-resources'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+group :development do
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
+end
 # Use ActiveModelSerializers to serialize JSON responses
 gem 'active_model_serializers', '~> 0.10.0.rc2'
 
