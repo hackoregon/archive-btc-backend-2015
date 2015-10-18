@@ -1308,3 +1308,82 @@ Started GET "/campaign-detail" for ::1 at 2015-10-17 15:07:20 -0700
 Processing by CampaignDetailController#index as */*
   [1m[36mCampaignDetail Load (26.7ms)[0m  [1m[34mSELECT "campaign_detail".* FROM "campaign_detail" ORDER BY "campaign_detail"."filer_id" ASC[0m
 Completed 200 OK in 754ms (Views: 169.3ms | ActiveRecord: 26.7ms)
+
+
+Started GET "/campaign-detail.json" for ::1 at 2015-10-17 16:41:23 -0700
+Processing by CampaignDetailController#index as JSON
+  [1m[36mCampaignDetail Load (7.5ms)[0m  [1m[34mSELECT "campaign_detail".* FROM "campaign_detail" ORDER BY "campaign_detail"."filer_id" ASC[0m
+Completed 200 OK in 303ms (Views: 99.5ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/campaign-detail/10.json" for ::1 at 2015-10-17 16:49:28 -0700
+Processing by CampaignDetailController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mCampaignDetail Load (0.3ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" WHERE "campaign_detail"."filer_id" = $1 ORDER BY "campaign_detail"."filer_id" ASC LIMIT 1[0m  [["filer_id", 10]]
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/campaign-details/10" for ::1 at 2015-10-17 16:49:34 -0700
+
+ActionController::RoutingError (No route matches [GET] "/campaign-details/10"):
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:52:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:42:in `call_app'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:24:in `block in call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:70:in `block in tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:26:in `tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/tagged_logging.rb:70:in `tagged'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/rack/logger.rb:24:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/runtime.rb:22:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/activesupport/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/load_interlock.rb:13:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/static.rb:133:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rack-6216a3f8a356/lib/rack/sendfile.rb:111:in `call'
+  /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/railties/lib/rails/engine.rb:522:in `call'
+  puma (2.14.0) lib/puma/server.rb:541:in `handle_request'
+  puma (2.14.0) lib/puma/server.rb:388:in `process_client'
+  puma (2.14.0) lib/puma/server.rb:270:in `block in run'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.14.0) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.3ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/danielamiller/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/bundler/gems/rails-bae2292d8f32/actionpack/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.7ms)
+
+
+Started GET "/campaign-detail/15.json" for ::1 at 2015-10-17 16:49:44 -0700
+Processing by CampaignDetailController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mCampaignDetail Load (0.7ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" WHERE "campaign_detail"."filer_id" = $1 ORDER BY "campaign_detail"."filer_id" ASC LIMIT 1[0m  [["filer_id", 15]]
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/campaign-detail/15.json" for ::1 at 2015-10-17 16:53:47 -0700
+Processing by CampaignDetailController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mCampaignDetail Load (1.1ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" WHERE "campaign_detail"."filer_id" = $1 ORDER BY "campaign_detail"."filer_id" ASC LIMIT 1[0m  [["filer_id", 15]]
+Completed 200 OK in 65ms (Views: 3.9ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/campaign-detail/15.json" for ::1 at 2015-10-17 16:53:58 -0700
+Processing by CampaignDetailController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mCampaignDetail Load (0.4ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" WHERE "campaign_detail"."filer_id" = $1 ORDER BY "campaign_detail"."filer_id" ASC LIMIT 1[0m  [["filer_id", 15]]
+Completed 200 OK in 32ms (Views: 1.3ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/campaign-detail/15.json" for ::1 at 2015-10-17 17:00:29 -0700
+Processing by CampaignDetailController#show as JSON
+  Parameters: {"id"=>"15"}
+  [1m[36mCampaignDetail Load (0.4ms)[0m  [1m[34mSELECT  "campaign_detail".* FROM "campaign_detail" WHERE "campaign_detail"."filer_id" = $1 ORDER BY "campaign_detail"."filer_id" ASC LIMIT 1[0m  [["filer_id", 15]]
+Completed 200 OK in 32ms (Views: 1.4ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/campaign-detail" for ::1 at 2015-10-17 17:00:35 -0700
+Processing by CampaignDetailController#index as HTML
+  [1m[36mCampaignDetail Load (8.5ms)[0m  [1m[34mSELECT "campaign_detail".* FROM "campaign_detail" ORDER BY "campaign_detail"."filer_id" ASC[0m
+Completed 200 OK in 1360ms (Views: 481.0ms | ActiveRecord: 8.5ms)

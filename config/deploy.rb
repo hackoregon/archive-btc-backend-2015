@@ -10,7 +10,7 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 lock '3.4.0'
 
 set :application, 'behind_the_curtain'
-set :repo_url, 'git@github.com:devdatta/behind_the_curtain.git' # Edit this to match your repository
+set :repo_url, 'git@github.com:hackoregon/btc-backend-2015.git' # Edit this to match your repository
 set :branch, :master
 set :deploy_to, '/home/deploy/behind_the_curtain'
 set :pty, true
